@@ -36,7 +36,7 @@ for (let i = 0; i < team.length; i++) {
     stampFinale += '<div class="row">';
     stampFinale += `<div><span class="nome">Nome:</span> <span class="valore">${team[i].nome}</span></div>`;
     stampFinale += `<div><span class="nome">Ruolo:</span> <span class="valore">${team[i].ruolo}</span></div>`;
-    stampFinale += `<div><span class="nome">Path immmagine:</span> <span class="valore">img/${team[i].image}</span></div>`;
+    stampFinale += `<div class="span_img"><span class="nome">Immmagine:</span> <img src="img/${team[i].image}" alt="image_${team[i].nome}"></div>`;
     stampFinale += '</div>';
 }
 

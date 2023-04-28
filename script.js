@@ -21,20 +21,23 @@ const team = [
     },
     {
         nome: "Scott Estrada",
-        ruolo: "Graphic Designer",
+        ruolo: "Developer",
         image: "scott-estrada-developer.jpg"
     },
     {
         nome:  "Barbara Ramos",
-        ruolo: "Chief Editor",
+        ruolo: "Graphic Designer",
         image: "barbara-ramos-graphic-designer.jpg"
     },
 ]
+let stampFinale = "";
 
 for (let i = 0; i < team.length; i++) {
-    console.log("");
-    console.log(`Componente numero ${i+1}:`);
-    console.log(`Nome: ${team[i].nome}`);
-    console.log(`Ruolo: ${team[i].ruolo}`);
-    console.log(`Path immmagine: img/${team[i].image}`);
+    stampFinale += '<div class="row">';
+    stampFinale += `<div><span class="nome">Nome:</span> <span class="valore">${team[i].nome}</span></div>`;
+    stampFinale += `<div><span class="nome">Ruolo:</span> <span class="valore">${team[i].ruolo}</span></div>`;
+    stampFinale += `<div><span class="nome">Path immmagine:</span> <span class="valore">img/${team[i].image}</span></div>`;
+    stampFinale += '</div>';
 }
+
+document.getElementById("lista_nomi").innerHTML = stampFinale;

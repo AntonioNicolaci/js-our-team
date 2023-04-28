@@ -31,3 +31,10 @@ const team = [
     },
 ]
 
+for (let i = 0; i < team.length; i++) {
+    console.log("");
+    console.log(`Componente numero ${i+1}:`);
+    console.log(`Nome: ${team[i].nome}`);
+    console.log(`Ruolo: ${team[i].ruolo}`);
+    console.log(`Path immmagine: img/${team[i].image}`);
+}

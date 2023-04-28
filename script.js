@@ -31,13 +31,20 @@ const team = [
     },
 ]
 let stampFinale = "";
+let i = 0;
 
-for (let i = 0; i < team.length; i++) {
-    stampFinale += '<div class="row">';
-    stampFinale += `<div><span class="nome">Nome:</span> <span class="valore">${team[i].nome}</span></div>`;
-    stampFinale += `<div><span class="nome">Ruolo:</span> <span class="valore">${team[i].ruolo}</span></div>`;
-    stampFinale += `<div class="span_img"><span class="nome">Immmagine:</span> <img src="img/${team[i].image}" alt="image_${team[i].nome}"></div>`;
-    stampFinale += '</div>';
-}
+stampFinale += `<div class="row row-col-sm-1 row-col-md-2 row-col-lg-3 gap-3 justify-content-center">`  
+for (let i= 0 ; i < team.length; i++) {
+    stampFinale += 
+       `<div class="card text-center col-sm-12 col-md-5 col-lg-3 p-0">
+            <img src="img/${team[i].image}" class="card-img-top" alt="img_${team[i].image}">
+            <div class="card-body">
+                <p class="card-text">${team[i].nome}</p>
+                <p class="card-text">${team[i].ruolo}</p>
+            </div>
+        </div>`;
+}    
+stampFinale += `</div>`
+
 
 document.getElementById("lista_nomi").innerHTML = stampFinale;

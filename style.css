@@ -2,10 +2,16 @@
     display: flex;
     gap: 10px;
     border-bottom: 1px solid #000;
+    align-items: center;
 }
 .nome{
     color: #ff0000;
 }
 .valore{
     color: #ff00ff;
+}
+.span_img{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
 }
